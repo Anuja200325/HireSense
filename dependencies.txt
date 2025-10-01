@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+pdfplumber
+python-docx
+sentence-transformers
+openai
+pinecone-client
+llama-index
