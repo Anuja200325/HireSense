@@ -3,3 +3,8 @@ djangorestframework==3.14.0
 pdfplumber==0.9.0
 python-docx==0.8.11
 corsheaders==3.14.0
+djangorestframework
+corsheaders
+pdfplumber
+python-docx
+
