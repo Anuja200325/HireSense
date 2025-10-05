@@ -1,3 +1,4 @@
+# backend/core/settings.py
 from pathlib import Path
 import os
 
@@ -49,6 +50,17 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     # ...
 ]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',  # for simplicity, you can use sqlite
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+# settings.py
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",

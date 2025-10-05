@@ -1,10 +1,13 @@
+#backend/interview/views.py
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import ResumeSerializer
+from rest_framework.parsers import MultiPartParser, FormParser 
 
 class ResumeUploadView(APIView):
-
+    parser_classes = (MultiPartParser, FormParser)
+    
     def post(self, request, format=None):
         serializer = ResumeSerializer(data=request.data)
         if serializer.is_valid():
